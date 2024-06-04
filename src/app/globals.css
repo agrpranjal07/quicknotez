@@ -3,28 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --pink-light: #FFE6E6;
+  --pink-soft: #E1AFD1;
+  --purple-medium: #AD88C6;
+  --purple-deep: #7469B6;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    --pink-light: #222831;
+    --pink-soft: #31363F;
+    --purple-medium: #76ABAE;
+    --purple-deep: #EEEEEE;
+  } 
+ }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--foreground-color);
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      var(--pink-light)
     )
-    rgb(var(--background-start-rgb));
+    var(--pink-soft);
 }
+
 
 @layer utilities {
   .text-balance {
